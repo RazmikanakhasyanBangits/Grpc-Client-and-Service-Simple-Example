@@ -25,19 +25,20 @@ namespace Grpc_Service_Usage {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChJQcm90b3MvZ3JlZXQucHJvdG8SBWdyZWV0IhwKDEhlbGxvUmVxdWVzdBIM",
-            "CgRuYW1lGAEgASgJIh0KCkhlbGxvUmVwbHkSDwoHbWVzc2FnZRgBIAEoCSIO",
-            "CgxyZXF1ZXN0TW9kZWwiIgoNcmVzcG9uc2VNb2RlbBIRCglNYXhSZXN1bHQY",
-            "ASABKAUydwoHR3JlZXRlchIyCghTYXlIZWxsbxITLmdyZWV0LkhlbGxvUmVx",
-            "dWVzdBoRLmdyZWV0LkhlbGxvUmVwbHkSOAoLQ3VzdG9tUmVwbHkSEy5ncmVl",
-            "dC5yZXF1ZXN0TW9kZWwaFC5ncmVldC5yZXNwb25zZU1vZGVsQhWqAhJHcnBj",
-            "X1NlcnZpY2VfVXNhZ2ViBnByb3RvMw=="));
+            "CgRuYW1lGAEgASgJIh0KCkhlbGxvUmVwbHkSDwoHbWVzc2FnZRgBIAEoCSIc",
+            "CgxyZXF1ZXN0TW9kZWwSDAoEbmFtZRgBIAEoCSJOCg1yZXNwb25zZU1vZGVs",
+            "EgsKA0FnZRgBIAEoBRIMCgRuYW1lGAIgASgJEg8KB3N1cm5hbWUYAyABKAkS",
+            "EQoJYmlydGhkYXRlGAQgASgJMncKB0dyZWV0ZXISMgoIU2F5SGVsbG8SEy5n",
+            "cmVldC5IZWxsb1JlcXVlc3QaES5ncmVldC5IZWxsb1JlcGx5EjgKC0N1c3Rv",
+            "bVJlcGx5EhMuZ3JlZXQucmVxdWVzdE1vZGVsGhQuZ3JlZXQucmVzcG9uc2VN",
+            "b2RlbEIVqgISR3JwY19TZXJ2aWNlX1VzYWdlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc_Service_Usage.HelloRequest), global::Grpc_Service_Usage.HelloRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc_Service_Usage.HelloReply), global::Grpc_Service_Usage.HelloReply.Parser, new[]{ "Message" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc_Service_Usage.requestModel), global::Grpc_Service_Usage.requestModel.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc_Service_Usage.responseModel), global::Grpc_Service_Usage.responseModel.Parser, new[]{ "MaxResult" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc_Service_Usage.requestModel), global::Grpc_Service_Usage.requestModel.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc_Service_Usage.responseModel), global::Grpc_Service_Usage.responseModel.Parser, new[]{ "Age", "Name", "Surname", "Birthdate" }, null, null, null, null)
           }));
     }
     #endregion
@@ -423,12 +424,24 @@ namespace Grpc_Service_Usage {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public requestModel(requestModel other) : this() {
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public requestModel Clone() {
       return new requestModel(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -444,12 +457,14 @@ namespace Grpc_Service_Usage {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -466,6 +481,10 @@ namespace Grpc_Service_Usage {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -475,6 +494,10 @@ namespace Grpc_Service_Usage {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -484,6 +507,9 @@ namespace Grpc_Service_Usage {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -494,6 +520,9 @@ namespace Grpc_Service_Usage {
     public void MergeFrom(requestModel other) {
       if (other == null) {
         return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -509,6 +538,10 @@ namespace Grpc_Service_Usage {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -523,6 +556,10 @@ namespace Grpc_Service_Usage {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -559,7 +596,10 @@ namespace Grpc_Service_Usage {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public responseModel(responseModel other) : this() {
-      maxResult_ = other.maxResult_;
+      age_ = other.age_;
+      name_ = other.name_;
+      surname_ = other.surname_;
+      birthdate_ = other.birthdate_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -568,14 +608,47 @@ namespace Grpc_Service_Usage {
       return new responseModel(this);
     }
 
-    /// <summary>Field number for the "MaxResult" field.</summary>
-    public const int MaxResultFieldNumber = 1;
-    private int maxResult_;
+    /// <summary>Field number for the "Age" field.</summary>
+    public const int AgeFieldNumber = 1;
+    private int age_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int MaxResult {
-      get { return maxResult_; }
+    public int Age {
+      get { return age_; }
       set {
-        maxResult_ = value;
+        age_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 2;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "surname" field.</summary>
+    public const int SurnameFieldNumber = 3;
+    private string surname_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Surname {
+      get { return surname_; }
+      set {
+        surname_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "birthdate" field.</summary>
+    public const int BirthdateFieldNumber = 4;
+    private string birthdate_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Birthdate {
+      get { return birthdate_; }
+      set {
+        birthdate_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -592,14 +665,20 @@ namespace Grpc_Service_Usage {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MaxResult != other.MaxResult) return false;
+      if (Age != other.Age) return false;
+      if (Name != other.Name) return false;
+      if (Surname != other.Surname) return false;
+      if (Birthdate != other.Birthdate) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (MaxResult != 0) hash ^= MaxResult.GetHashCode();
+      if (Age != 0) hash ^= Age.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Surname.Length != 0) hash ^= Surname.GetHashCode();
+      if (Birthdate.Length != 0) hash ^= Birthdate.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -616,9 +695,21 @@ namespace Grpc_Service_Usage {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MaxResult != 0) {
+      if (Age != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(MaxResult);
+        output.WriteInt32(Age);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (Surname.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Surname);
+      }
+      if (Birthdate.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Birthdate);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -629,9 +720,21 @@ namespace Grpc_Service_Usage {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MaxResult != 0) {
+      if (Age != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(MaxResult);
+        output.WriteInt32(Age);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (Surname.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Surname);
+      }
+      if (Birthdate.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Birthdate);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -642,8 +745,17 @@ namespace Grpc_Service_Usage {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (MaxResult != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxResult);
+      if (Age != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Age);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Surname.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Surname);
+      }
+      if (Birthdate.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Birthdate);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -656,8 +768,17 @@ namespace Grpc_Service_Usage {
       if (other == null) {
         return;
       }
-      if (other.MaxResult != 0) {
-        MaxResult = other.MaxResult;
+      if (other.Age != 0) {
+        Age = other.Age;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Surname.Length != 0) {
+        Surname = other.Surname;
+      }
+      if (other.Birthdate.Length != 0) {
+        Birthdate = other.Birthdate;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -674,7 +795,19 @@ namespace Grpc_Service_Usage {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            MaxResult = input.ReadInt32();
+            Age = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            Surname = input.ReadString();
+            break;
+          }
+          case 34: {
+            Birthdate = input.ReadString();
             break;
           }
         }
@@ -692,7 +825,19 @@ namespace Grpc_Service_Usage {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            MaxResult = input.ReadInt32();
+            Age = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            Surname = input.ReadString();
+            break;
+          }
+          case 34: {
+            Birthdate = input.ReadString();
             break;
           }
         }

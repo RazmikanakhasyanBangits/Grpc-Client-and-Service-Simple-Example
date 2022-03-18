@@ -1,7 +1,19 @@
-﻿namespace Grpc_Service_Usage
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GrpcGreeterClient
 {
     public class MyModel
     {
-      public int[] MyArray { get; set; }
+        public string? Surname { get; set; }
+        public string? Name { get; set; }
+
+        public int? Age { get; set; }
+
+        public DateTime? BirthDate { get; set; }
+
     }
 }

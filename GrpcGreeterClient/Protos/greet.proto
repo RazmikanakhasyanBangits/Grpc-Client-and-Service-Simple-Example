@@ -22,9 +22,12 @@ message HelloReply {
 }
 
 message requestModel{
-	int32 max=1;
+	string name=1;
 }
 
 message responseModel{
-	int32 MaxResult=1;
+	int32 Age=1;
+	string name = 2;
+	string surname = 3;
+	string birthdate=4;
 }
