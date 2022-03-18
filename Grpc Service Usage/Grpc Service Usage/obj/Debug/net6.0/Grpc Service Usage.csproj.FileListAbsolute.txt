@@ -1,0 +1,29 @@
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\bin\Debug\net6.0\appsettings.json
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\bin\Debug\net6.0\Grpc Service Usage.exe
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\bin\Debug\net6.0\Grpc Service Usage.deps.json
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\bin\Debug\net6.0\Grpc Service Usage.runtimeconfig.json
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\bin\Debug\net6.0\Grpc Service Usage.dll
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\bin\Debug\net6.0\ref\Grpc Service Usage.dll
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\bin\Debug\net6.0\Grpc Service Usage.pdb
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\bin\Debug\net6.0\Google.Protobuf.dll
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\bin\Debug\net6.0\Grpc.AspNetCore.Server.dll
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\bin\Debug\net6.0\Grpc.AspNetCore.Server.ClientFactory.dll
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\bin\Debug\net6.0\Grpc.Core.Api.dll
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\bin\Debug\net6.0\Grpc.Net.Client.dll
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\bin\Debug\net6.0\Grpc.Net.ClientFactory.dll
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\bin\Debug\net6.0\Grpc.Net.Common.dll
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\obj\Debug\net6.0\Grpc Service Usage.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\obj\Debug\net6.0\Grpc Service Usage.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\obj\Debug\net6.0\Grpc Service Usage.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\obj\Debug\net6.0\Grpc Service Usage.AssemblyInfo.cs
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\obj\Debug\net6.0\Grpc Service Usage.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\obj\Debug\net6.0\Grpc Service Usage.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\obj\Debug\net6.0\scopedcss\bundle\Grpc Service Usage.styles.css
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\obj\Debug\net6.0\Grpc Service Usage.csproj.CopyComplete
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\obj\Debug\net6.0\Grpc Service Usage.dll
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\obj\Debug\net6.0\ref\Grpc Service Usage.dll
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\obj\Debug\net6.0\Grpc Service Usage.pdb
+C:\Users\User\source\repos\Grpc Service Usage\Grpc Service Usage\obj\Debug\net6.0\Grpc Service Usage.genruntimeconfig.cache
