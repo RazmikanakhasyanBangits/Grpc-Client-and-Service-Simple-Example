@@ -19,3 +19,4 @@ C:\Users\User\source\repos\GrpcGreeterClient\GrpcGreeterClient\bin\Debug\net6.0\
 C:\Users\User\source\repos\GrpcGreeterClient\GrpcGreeterClient\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\User\source\repos\GrpcGreeterClient\GrpcGreeterClient\obj\Debug\net6.0\GrpcGreeterClient.csproj.CopyComplete
 C:\Users\User\source\repos\GrpcGreeterClient\GrpcGreeterClient\obj\Debug\net6.0\refint\GrpcGreeterClient.dll
+C:\Users\User\source\repos\GrpcGreeterClient\GrpcGreeterClient\bin\Debug\net6.0\AutoMapper.dll

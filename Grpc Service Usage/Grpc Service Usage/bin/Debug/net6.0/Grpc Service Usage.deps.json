@@ -8,10 +8,22 @@
     ".NETCoreApp,Version=v6.0": {
       "Grpc Service Usage/1.0.0": {
         "dependencies": {
+          "AutoMapper": "11.0.1",
           "Grpc.AspNetCore": "2.40.0"
         },
         "runtime": {
           "Grpc Service Usage.dll": {}
+        }
+      },
+      "AutoMapper/11.0.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.1.0"
+          }
         }
       },
       "Google.Protobuf/3.18.0": {
@@ -99,6 +111,7 @@
         }
       },
       "Grpc.Tools/2.40.0": {},
+      "Microsoft.CSharp/4.7.0": {},
       "Microsoft.Extensions.Configuration/3.0.3": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "3.0.3"
@@ -151,6 +164,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AutoMapper/11.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WIadGC1pIwbnyTubvI577p3F++Bsj9q2Q3OaAc1I0QS+JhupN1xkdrPBhI9bPIeg63zM81tZplUNYkqU1HE5jQ==",
+      "path": "automapper/11.0.1",
+      "hashPath": "automapper.11.0.1.nupkg.sha512"
     },
     "Google.Protobuf/3.18.0": {
       "type": "package",
@@ -214,6 +234,13 @@
       "sha512": "sha512-yOAhijs6POv7oISBV9Rdx5YCSdo/+6zCJTB/ULum3GA4RunxVFI0rPnpJM1+YM9yMf+H1/D001ignsepnygPJw==",
       "path": "grpc.tools/2.40.0",
       "hashPath": "grpc.tools.2.40.0.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "path": "microsoft.csharp/4.7.0",
+      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/3.0.3": {
       "type": "package",

@@ -1,24 +1,24 @@
 ﻿using GrpcGreeterClient;
-
+using AutoMapper;
 namespace Grpc_Service_Usage.Services
 {
     public class BaseHandler
     {
+        private static AutoMapper.MapperConfiguration mapperConfiguration;
         public static Task<responseModel> HandleAsync(Task<List<MyModel>> Model,requestModel request)
         {
+            mapperConfiguration = new(config =>
+           config.CreateMap<MyModel, responseModel>());
             try { 
 
             if (!Model.Result.Contains(Model.Result.FirstOrDefault(x => x.Name == request.Name)))
                 throw new ArgumentNullException();
 
-            var GetUser = new responseModel
-            {
-                Age = Convert.ToInt32(Model.Result.FirstOrDefault(x => x.Name == request.Name).Age),
-                Name = Model.Result.FirstOrDefault(x => x.Name == request.Name).Name,
-                Surname = Model.Result.FirstOrDefault(x => x.Name == request.Name).Surname,
-                Birthdate = DateTime.UtcNow.ToString()
-            };
-            return Task.FromResult(GetUser);
+
+                var GetUser = Model.Result.FirstOrDefault(x => x.Name == request.Name);
+                var mapper = new Mapper(mapperConfiguration);
+               
+            return Task.FromResult(mapper.Map<responseModel>(GetUser));
 
         }
             catch (ArgumentNullException ex)

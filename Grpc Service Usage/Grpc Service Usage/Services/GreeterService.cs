@@ -66,6 +66,8 @@ namespace Grpc_Service_Usage.Services
         {
             var data = AddDataAsync(new List<MyModel>());
 
+
+            _logger.Log(LogLevel.Information, "Getting Data");
             return await BaseHandler.HandleAsync(data, request);
         }
     }
