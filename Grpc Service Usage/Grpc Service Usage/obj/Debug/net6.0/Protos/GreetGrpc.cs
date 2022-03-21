@@ -15,6 +15,7 @@ namespace Grpc_Service_Usage {
   {
     static readonly string __ServiceName = "greet.Greeter";
 
+
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
