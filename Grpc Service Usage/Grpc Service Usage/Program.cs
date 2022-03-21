@@ -7,7 +7,7 @@ using System.Linq;
 using System.Reflection;
 using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
-
+using Grpc_Service_Usage;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +16,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddGrpc();
+builder.Services.AddAutoMapper(typeof(MapperSettings));
+builder.Services.AddControllers();
+
+#region DI
+builder.Services.AddSingleton<IBaseHandler, BaseHandler>();
+#endregion
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

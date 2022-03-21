@@ -6,20 +6,21 @@ using System.Xml.Linq;
 using System.Linq.Expressions;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-
+using AutoMapper;
 
 namespace Grpc_Service_Usage.Services
 {
     public class GreeterService : Greeter.GreeterBase
     {
         private readonly ILogger<GreeterService> _logger;
-        public GreeterService(ILogger<GreeterService> logger)
+        private readonly IMapper mapper;
+        private readonly IBaseHandler baseHandler;
+        public GreeterService(ILogger<GreeterService> logger, IMapper mapper, IBaseHandler baseHandler)
         {
+            this.baseHandler = baseHandler;
+            this.mapper = mapper;
             _logger = logger;
         }
-        List<MyModel> model = new();
-
-
 
         public Task<List<MyModel>> AddDataAsync(List<MyModel> model)
         {
@@ -65,10 +66,8 @@ namespace Grpc_Service_Usage.Services
         public override async Task<responseModel> CustomReply(requestModel request, ServerCallContext context)
         {
             var data = AddDataAsync(new List<MyModel>());
-
-
-            _logger.Log(LogLevel.Information, "Getting Data");
-            return await BaseHandler.HandleAsync(data, request);
+            _logger.LogDebug("Getting Data");
+            return await baseHandler.HandleAsync(data, request);
         }
     }
 

@@ -57,3 +57,4 @@ C:\Users\User\source\repos\GrpcGreeterClient\Grpc Service Usage\Grpc Service Usa
 C:\Users\User\source\repos\GrpcGreeterClient\Grpc Service Usage\Grpc Service Usage\obj\Debug\net6.0\Grpc Service Usage.genruntimeconfig.cache
 C:\Users\User\source\repos\GrpcGreeterClient\Grpc Service Usage\Grpc Service Usage\obj\Debug\net6.0\ref\Grpc Service Usage.dll
 C:\Users\User\source\repos\GrpcGreeterClient\Grpc Service Usage\Grpc Service Usage\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\User\source\repos\GrpcGreeterClient\Grpc Service Usage\Grpc Service Usage\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
