@@ -18,6 +18,7 @@ namespace Grpc_Service_Usage.Services
                 var GetUser = Model.Result.FirstOrDefault(x => x.Name == request.Name);
                 var mapper = new Mapper(mapperConfiguration);
                
+
             return Task.FromResult(mapper.Map<responseModel>(GetUser));
 
         }
